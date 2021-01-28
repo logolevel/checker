@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <table width="1200" cellspacing="1" cellpadding="4" border="0" align="center">
+
+        <tbody>
+            <tr>
+                <td colspan="15">
+                    <div align="right"></div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="arial14"><label>
+                        <input name="Submit" type="submit" id="Submit" value="Select Jobs" class="btn">
+                    </label></td>
+                <td class="arial14">&nbsp;</td>
+                <td class="arial14">&nbsp;</td>
+                <td class="arial14">&nbsp;</td>
+                <td class="arial14">&nbsp;</td>
+                <td class="arial14">&nbsp;</td>
+                <td class="arial14">&nbsp;</td>
+                <td class="arial14">&nbsp;</td>
+                <td class="arial14">&nbsp;</td>
+                <td colspan="5" class="arial14"><label>
+                        <div align="right"></div>
+                    </label></td>
+            </tr>
+            <tr>
+                <td colspan="6" class="arial14">
+                    <div align="center">
+                        <div align="left">Showing <strong>207</strong> of
+                            <strong>207</strong>
+                            Jobs &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sort
+                            <select name="sort" class="arial14">
+                                <option value="id">Job ID</option>
+                                <option value="auction_id">Order ID</option>
+                                <option value="create_date">Job Date</option>
+                                <option value="inop">Inop</option>
+                                <option value="p_name">P Name</option>
+                                <option value="p_state">P State</option>
+                                <option value="p_zip">P Zip</option>
+                                <option value="d_name">D Name</option>
+                                <option value="d_state">D State</option>
+                                <option value="d_zip">D Zip</option>
+                                <option value="distance">Distance</option>
+                            </select>
+                            Dir
+                            <select name="dir" class="arial14">
+                                <option selected="">ASC</option>
+                                <option>DESC</option>
+                            </select>
+                            &nbsp;
+                            <input name="Sort" type="submit" id="Sort" value="Sort" class="btnstyle">
+                            &nbsp;&nbsp;&nbsp;
+                        </div>
+                    </div>
+                </td>
+    
+                <td colspan="9" class="arial14">
+                    <div align="right">
+                        Show
+                        <select name="perpage" class="arial14" id="perpage" onchange="this.form.submit()">
+                            <option>50</option>
+                            <option>100</option>
+                            <option>250</option>
+                            <option selected="selected">500</option>
+                            <option>All</option>
+                        </select>
+                        per page&nbsp;&nbsp;&nbsp;&nbsp;
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="15">
+                    <div class="head">Available ACV Auctions Jobs</div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5" class="header12" bgcolor="#000000">
+                    <div align="center">Job Info </div>
+                </td>
+                <td colspan="4" class="header12" bgcolor="#000000">
+                    <div align="center">Pickup Info </div>
+                </td>
+                <td colspan="4" class="header12" bgcolor="#000000">
+                    <div align="center">Delivery Info </div>
+                </td>
+                <td class="header12" bgcolor="#000000">&nbsp;</td>
+                <td class="header12" bgcolor="#000000">
+                    <div align="center"></div>
+                </td>
+            </tr>
+            <tr>
+                <td class="header12" bgcolor="#5D5C61">&nbsp;</td>
+                <td class="header12" bgcolor="#5D5C61">
+                    <div align="center"><a
+                            href="available.php?sort=auction_id&amp;dir=ASC&amp;start_date=&amp;end_date=&amp;p_filter=&amp;d_filter=&amp;search_txt="
+                            class="menu">Order ID</a> </div>
+                </td>
+                <td class="header12" bgcolor="#5D5C61">
+                    <div align="center"><a
+                            href="available.php?sort=create_date&amp;dir=ASC&amp;start_date=&amp;end_date=&amp;p_filter=&amp;d_filter=&amp;search_txt="
+                            class="menu">Date</a></div>
+                </td>
+                <td class="header12" bgcolor="#5D5C61">
+                    <div align="center">Vehicle</div>
+                </td>
+                <td class="header12" bgcolor="#5D5C61">
+                    <div align="center"><a
+                            href="available.php?sort=inop&amp;dir=ASC&amp;start_date=&amp;end_date=&amp;p_filter=&amp;d_filter=&amp;search_txt="
+                            class="menu">Inop?</a></div>
+                </td>
+                <td class="header12" bgcolor="#7395AE">
+                    <div align="center">Address</div>
+                </td>
+                <td class="header12" bgcolor="#7395AE">
+                    <div align="center">City</div>
+                </td>
+                <td class="header12" bgcolor="#7395AE">
+                    <div align="center"><a
+                            href="available.php?sort=p_state&amp;dir=ASC&amp;start_date=&amp;end_date=&amp;p_filter=&amp;d_filter=&amp;search_txt="
+                            class="menu">State</a></div>
+                </td>
+    
+                <td class="header12" bgcolor="#7395AE">
+                    <div align="center"><a
+                            href="available.php?sort=p_zip&amp;dir=ASC&amp;start_date=&amp;end_date=&amp;p_filter=&amp;d_filter=&amp;search_txt="
+                            class="menu">Zip</a></div>
+                </td>
+                <td class="header12" bgcolor="#547994">
+                    <div align="center">Address</div>
+                </td>
+                <td class="header12" bgcolor="#547994">
+                    <div align="center">City</div>
+                </td>
+                <td class="header12" bgcolor="#547994">
+                    <div align="center"><a
+                            href="available.php?sort=d_state&amp;dir=ASC&amp;start_date=&amp;end_date=&amp;p_filter=&amp;d_filter=&amp;search_txt="
+                            class="menu">State</a></div>
+                </td>
+                <td class="header12" bgcolor="#547994">
+                    <div align="center"><a
+                            href="available.php?sort=d_zip&amp;dir=ASC&amp;start_date=&amp;end_date=&amp;p_filter=&amp;d_filter=&amp;search_txt="
+                            class="menu">Zip</a></div>
+                </td>
+                <td class="header12" width="50" bgcolor="#3C5465">
+                    <div align="center"><a
+                            href="available.php?sort=distance&amp;dir=ASC&amp;start_date=&amp;end_date=&amp;p_filter=&amp;d_filter=&amp;search_txt="
+                            class="menu">Distance</a></div>
+                </td>
+                <td class="header12" width="50" bgcolor="#3C5465">
+                    <div align="center">Payout</div>
+                </td>
+            </tr>
+            <tr class="rowheight" onmouseover="this.bgColor = '#C2F3C6'" onmouseout="this.bgColor = '#FFFFFF'"
+                bgcolor="#FFFFFF">
+                <td class="arial14">
+                    <input type="checkbox" name="selected[]" value="stage" onclick="btnstate()" class="stageaction">
+    
+                    <input type="checkbox" name="selected[]" value="320695" onclick="btnstate()">
+                </td>
+                <td class="arial14">2505315</td>
+                <td class="arial14" width="90">
+                    <div align="center">01-25-2021</div>
+                </td>
+                <td class="arial14">2014 GMC Yukon Denali</td>
+                <td class="arial14">
+                    <div align="center">
+                        Good </div>
+                </td>
+    
+                <td class="arial14">1066 W Charleston</td>
+                <td class="arial14">Las Vegas</td>
+                <td class="arial14">NV</td>
+                <td class="arial14">89106</td>
+                <td class="arial14">788 NW 6TH ST</td>
+                <td class="arial14">Redmond</td>
+                <td class="arial14">OR</td>
+                <td class="arial14">97756</td>
+                <td class="arial14" width="50">
+                    <div align="center">831</div>
+                </td>
+                <td class="arial14" width="50">
+                    <div align="center">$776.16 </div>
+                </td>
+            </tr>
+            <tr class="rowheight" onmouseover="this.bgColor = '#C2F3C6'" onmouseout="this.bgColor = '#F1EEEE'"
+                bgcolor="#F1EEEE">
+                <td class="arial14">
+                    <input type="checkbox" name="selected[]" value="stage" onclick="btnstate()" class="stageaction">
+    
+                    <input type="checkbox" name="selected[]" value="320252" onclick="btnstate()">
+                </td>
+                <td class="arial14">2498743</td>
+                <td class="arial14" width="90">
+                    <div align="center">01-25-2021</div>
+                </td>
+                <td class="arial14">2012 Mazda CX-9 ouring</td>
+                <td class="arial14">
+                    <div align="center">
+                        Good </div>
+                </td>
+    
+                <td class="arial14">2500 North Carson St</td>
+                <td class="arial14">Carson City</td>
+                <td class="arial14">NV</td>
+                <td class="arial14">89706</td>
+                <td class="arial14">8600 NE ST JOHNS RD</td>
+                <td class="arial14">Vancouver</td>
+                <td class="arial14">WA</td>
+                <td class="arial14">98665</td>
+                <td class="arial14" width="50">
+                    <div align="center">573</div>
+                </td>
+                <td class="arial14" width="50">
+                    <div align="center">$608.16 </div>
+                </td>
+            </tr>
+            <tr class="rowheight" onmouseover="this.bgColor = '#C2F3C6'" onmouseout="this.bgColor = '#FFFFFF'"
+                bgcolor="#FFFFFF">
+                <td class="arial14">
+                    <input type="checkbox" name="selected[]" value="stage" onclick="btnstate()" class="stageaction">
+    
+                    <input type="checkbox" name="selected[]" value="320630" onclick="btnstate()">
+                </td>
+                <td class="arial14">2504712</td>
+                <td class="arial14" width="90">
+                    <div align="center">01-25-2021</div>
+                </td>
+                <td class="arial14">2003 Toyota Avalon XL</td>
+                <td class="arial14">
+                    <div align="center">
+                        Good </div>
+                </td>
+    
+                <td class="arial14">300 Westport Ave</td>
+                <td class="arial14">Norwalk</td>
+                <td class="arial14">CT</td>
+                <td class="arial14">06851</td>
+                <td class="arial14">572 US 46 East</td>
+                <td class="arial14">Fairfield</td>
+                <td class="arial14">NJ</td>
+                <td class="arial14">07004</td>
+                <td class="arial14" width="50">
+                    <div align="center">64</div>
+                </td>
+                <td class="arial14" width="50">
+                    <div align="center">$104.16 </div>
+                </td>
+            </tr>
+            <tr class="rowheight" onmouseover="this.bgColor = '#C2F3C6'" onmouseout="this.bgColor = '#F1EEEE'"
+                bgcolor="#F1EEEE">
+                <td class="arial14">
+                    <input type="checkbox" name="selected[]" value="stage" onclick="btnstate()" class="stageaction">
+    
+                    <input type="checkbox" name="selected[]" value="320665" onclick="btnstate()">
+                </td>
+                <td class="arial14">2505043</td>
+                <td class="arial14" width="90">
+                    <div align="center">01-25-2021</div>
+                </td>
+                <td class="arial14">2012 Jeep Grand Cherokee Laredo</td>
+                <td class="arial14">
+                    <div align="center">
+                        Good </div>
+                </td>
+    
+                <td class="arial14">4202 Chiles Road</td>
+                <td class="arial14">Davis</td>
+                <td class="arial14">CA</td>
+                <td class="arial14">95616</td>
+                <td class="arial14">788 NW 6TH ST</td>
+                <td class="arial14">Redmond</td>
+                <td class="arial14">OR</td>
+                <td class="arial14">97756</td>
+                <td class="arial14" width="50">
+                    <div align="center">445</div>
+                </td>
+                <td class="arial14" width="50">
+                    <div align="center">$482.16 </div>
+                </td>
+            </tr>
+            <tr class="rowheight" onmouseover="this.bgColor = '#C2F3C6'" onmouseout="this.bgColor = '#FFFFFF'"
+                bgcolor="#FFFFFF">
+                <td class="arial14">
+                    <input type="checkbox" name="selected[]" value="stage" onclick="btnstate()" class="stageaction">
+    
+                    <input type="checkbox" name="selected[]" value="319575" onclick="btnstate()">
+                </td>
+                <td class="arial14">2494041</td>
+                <td class="arial14" width="90">
+                    <div align="center">01-22-2021</div>
+                </td>
+                <td class="arial14">2011 Ford F150 XLT</td>
+                <td class="arial14">
+                    <div align="center">
+                        Good </div>
+                </td>
+    
+                <td class="arial14">555 cypress ave</td>
+                <td class="arial14">Redding</td>
+                <td class="arial14">CA</td>
+                <td class="arial14">96001</td>
+                <td class="arial14">788 NW 6TH ST</td>
+                <td class="arial14">Redmond</td>
+                <td class="arial14">OR</td>
+                <td class="arial14">97756</td>
+                <td class="arial14" width="50">
+                    <div align="center">298</div>
+                </td>
+                <td class="arial14" width="50">
+                    <div align="center">$490 </div>
+                </td>
+            </tr>
+            <tr class="rowheight" onmouseover="this.bgColor = '#C2F3C6'" onmouseout="this.bgColor = '#F1EEEE'"
+                bgcolor="#F1EEEE">
+                <td class="arial14">
+                    <input type="checkbox" name="selected[]" value="stage" onclick="btnstate()" class="stageaction">
+    
+                    <input type="checkbox" name="selected[]" value="319208" onclick="btnstate()">
+                </td>
+                <td class="arial14">2494468</td>
+                <td class="arial14" width="90">
+                    <div align="center">01-22-2021</div>
+                </td>
+                <td class="arial14">2012 Ford F150 XLT</td>
+                <td class="arial14">
+                    <div align="center">
+                        Good </div>
+                </td>
+    
+                <td class="arial14">2915 Hwy 93 South</td>
+                <td class="arial14">Kalispell</td>
+                <td class="arial14">MT</td>
+                <td class="arial14">59901</td>
+                <td class="arial14">345 NE Third St</td>
+                <td class="arial14">Bend</td>
+                <td class="arial14">OR</td>
+                <td class="arial14">97701</td>
+                <td class="arial14" width="50">
+                    <div align="center">617</div>
+                </td>
+                <td class="arial14" width="50">
+                    <div align="center">$720 </div>
+                </td>
+            </tr>
+            <tr class="rowheight" onmouseover="this.bgColor = '#C2F3C6'" onmouseout="this.bgColor = '#FFFFFF'"
+                bgcolor="#FFFFFF">
+                <td class="arial14">
+                    <input type="checkbox" name="selected[]" value="stage" onclick="btnstate()" class="stageaction">
+    
+                    <input type="checkbox" name="selected[]" value="319721" onclick="btnstate()">
+                </td>
+                <td class="arial14">2492250</td>
+                <td class="arial14" width="90">
+                    <div align="center">01-22-2021</div>
+                </td>
+                <td class="arial14">2016 GMC Sierra 2500 W/T</td>
+                <td class="arial14">
+                    <div align="center">
+                        Good </div>
+                </td>
+    
+                <td class="arial14">5220 E. Main Street</td>
+                <td class="arial14">Farmington</td>
+                <td class="arial14">NM</td>
+                <td class="arial14">87402</td>
+                <td class="arial14">8 north gate drive</td>
+                <td class="arial14">Englishtown</td>
+                <td class="arial14">NJ</td>
+                <td class="arial14">07726</td>
+                <td class="arial14" width="50">
+                    <div align="center">---</div>
+                </td>
+                <td class="arial14" width="50">
+                    <div align="center">$1430 </div>
+                </td>
+            </tr>
+            
+            <tr class="rowheight" onmouseover="this.bgColor = '#C2F3C6'" onmouseout="this.bgColor = '#F1EEEE'"
+                bgcolor="#F1EEEE">
+                <td class="arial14">
+                    <input type="checkbox" name="selected[]" value="stage" onclick="btnstate()" class="stageaction">
+    
+                    <input type="checkbox" name="selected[]" value="320252" onclick="btnstate()">
+                </td>
+                <td class="arial14">2498743</td>
+                <td class="arial14" width="90">
+                    <div align="center">01-25-2021</div>
+                </td>
+                <td class="arial14">2012 Mazda CX-9 ouring</td>
+                <td class="arial14">
+                    <div align="center">
+                        Good </div>
+                </td>
+    
+                <td class="arial14">2500 North Carson St</td>
+                <td class="arial14">Carson City</td>
+                <td class="arial14">NV</td>
+                <td class="arial14">89706</td>
+                <td class="arial14">8600 NE ST JOHNS RD</td>
+                <td class="arial14">Vancouver</td>
+                <td class="arial14">WA</td>
+                <td class="arial14">98665</td>
+                <td class="arial14" width="50">
+                    <div align="center">573</div>
+                </td>
+                <td class="arial14" width="50">
+                    <div align="center">$608.16 </div>
+                </td>
+            </tr>
+
+            <tr class="rowheight" onmouseover="this.bgColor = '#C2F3C6'" onmouseout="this.bgColor = '#F1EEEE'"
+                bgcolor="#F1EEEE">
+                <td class="arial14">
+                    <input type="checkbox" name="selected[]" value="stage" onclick="btnstate()" class="stageaction">
+    
+                    <input type="checkbox" name="selected[]" value="319636" onclick="btnstate()">
+                </td>
+                <td class="arial14">2495542</td>
+                <td class="arial14" width="90">
+                    <div align="center">01-22-2021</div>
+                </td>
+                <td class="arial14">2014 Ford F250SD XLT</td>
+                <td class="arial14">
+                    <div align="center">
+                        Good </div>
+                </td>
+    
+                <td class="arial14">23115 State Rt 12</td>
+                <td class="arial14">Watertown</td>
+                <td class="arial14">NY</td>
+                <td class="arial14">13601</td>
+                <td class="arial14">608 w main st</td>
+                <td class="arial14">Peru</td>
+                <td class="arial14">IN</td>
+                <td class="arial14">46970</td>
+                <td class="arial14" width="50">
+                    <div align="center">662</div>
+                </td>
+                <td class="arial14" width="50">
+                    <div align="center">$770 </div>
+                </td>
+            </tr>
+            <tr class="rowheight" onmouseover="this.bgColor = '#C2F3C6'" onmouseout="this.bgColor = '#FFFFFF'"
+                bgcolor="#FFFFFF">
+                <td class="arial14">
+                    <input type="checkbox" name="selected[]" value="stage" onclick="btnstate()" class="stageaction">
+    
+                    <input type="checkbox" name="selected[]" value="318885" onclick="btnstate()">
+                </td>
+                <td class="arial14">2489127</td>
+                <td class="arial14" width="90">
+                    <div align="center">01-21-2021</div>
+                </td>
+                <td class="arial14">2011 Honda Accord EX-L</td>
+                <td class="arial14">
+                    <div align="center">
+                        Good </div>
+                </td>
+    
+                <td class="arial14">Grey Rock Place</td>
+                <td class="arial14">Stamford</td>
+                <td class="arial14">CT</td>
+                <td class="arial14">06901</td>
+                <td class="arial14">469 fairview ave</td>
+                <td class="arial14">Hudson</td>
+                <td class="arial14">NY</td>
+                <td class="arial14">12534</td>
+                <td class="arial14" width="50">
+                    <div align="center">132</div>
+                </td>
+                <td class="arial14" width="50">
+                    <div align="center">$200 </div>
+                </td>
+            </tr>
+            <tr class="rowheight" onmouseover="this.bgColor = '#C2F3C6'" onmouseout="this.bgColor = '#F1EEEE'"
+                bgcolor="#F1EEEE">
+                <td class="arial14">
+                    <input type="checkbox" name="selected[]" value="stage" onclick="btnstate()" class="stageaction">
+    
+                    <input type="checkbox" name="selected[]" value="320805" onclick="btnstate()">
+                </td>
+                <td class="arial14">2505894</td>
+                <td class="arial14" width="90">
+                    <div align="center">01-26-2021</div>
+                </td>
+                <td class="arial14">2005 Subaru Impreza utback</td>
+                <td class="arial14">
+                    <div align="center">
+                        Good </div>
+                </td>
+    
+                <td class="arial14">1660 - 1670 Hartford Ave.</td>
+                <td class="arial14">Johnston</td>
+                <td class="arial14">RI</td>
+                <td class="arial14">02919</td>
+                <td class="arial14">3251 Cranberry hwy</td>
+                <td class="arial14">Buzzards Bay</td>
+                <td class="arial14">MA</td>
+                <td class="arial14">02532</td>
+                <td class="arial14" width="50">
+                    <div align="center">62</div>
+                </td>
+                <td class="arial14" width="50">
+                    <div align="center">$104.16 </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
