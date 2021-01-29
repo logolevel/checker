@@ -14,7 +14,7 @@ $(function () {
 	let checker = new Promise((resolve, reject) => { 
 
 		for (let i = 0; i < numberOfElements; i++) {
-			let valueCity = $(".rowheight td:nth-child(7)")[i];
+			let valueCity = $(".rowheight td:nth-child(7)")[i].textContent;
 			console.log(valueCity);
 		}
 
